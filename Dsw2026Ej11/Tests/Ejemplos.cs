@@ -92,20 +92,23 @@ internal class Ejemplos
         CasoLinq casoLinq = new CasoLinq();
 
         Console.WriteLine($"Primer Libro: {casoLinq.FirstLibro()}");
+        Console.WriteLine($"Último Libro: {casoLinq.LastLibro()}");
+        Console.WriteLine($"Total Precios: {casoLinq.GetTotalPrecios():n2}");
+        Console.WriteLine($"Promedio Precios: {casoLinq.GetPromedioPrecios():n2}");
+        Console.WriteLine($"Mayor Precio: {casoLinq.GetMayorPrecio()}");
+        Console.WriteLine($"Menor Precio: {casoLinq.GetMenorPrecio()}");
 
-        Libro ultimo = casoLinq.LastLibro();
-        Console.WriteLine($"Último Libro: {ultimo }");
+        
+        Console.WriteLine("\nLibro por ID (Mayores a 15):");
+        casoLinq.GetListById().ToList().ForEach(Console.WriteLine);
 
+        Console.WriteLine("\nLibros:");
+        casoLinq.GetLibros().ToList().ForEach(Console.WriteLine);
 
-        Console.WriteLine($"Total Precios: {casoLinq.GetTotalPrecios() }");
-        Console.WriteLine($"Promedio Precios: {casoLinq.GetPromedioPrecios() }");
+        Console.WriteLine("\nMayor Promedio:");
+        casoLinq.GetMayorPromedio().ToList().ForEach(Console.WriteLine);
 
-
-        Console.WriteLine($"Libro por ID: {casoLinq.GetListById() }");
-        Console.WriteLine($"Libros: {casoLinq.GetLibros() }");
-        Console.WriteLine($"Mayor Precio: {casoLinq.GetMayorPrecio() }");
-        Console.WriteLine($"Menor Precio: {casoLinq.GetMenorPrecio() }");
-        Console.WriteLine($"Mayor Promedio: {casoLinq.GetMayorPromedio() }");
-        Console.WriteLine($"Libros Ordenados: {casoLinq.GetLibrosOrdenados() }");
+        Console.WriteLine("\nLibros Ordenados:");
+        casoLinq.GetLibrosOrdenados().ToList().ForEach(Console.WriteLine);
     }
 }
