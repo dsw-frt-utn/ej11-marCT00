@@ -102,7 +102,7 @@ internal class Ejemplos
         Console.WriteLine("\nLibro por ID (Mayores a 15):");
         casoLinq.GetListById().ToList().ForEach(Console.WriteLine);
 
-        Console.WriteLine("\nLibros (Formato String):");
+        Console.WriteLine("\nLibros:");
         casoLinq.GetLibros().ToList().ForEach(Console.WriteLine);
 
         Console.WriteLine("\nMayor Promedio:");
