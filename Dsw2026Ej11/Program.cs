@@ -34,7 +34,7 @@ internal class Program
                     break;
                 case "4":
                     salir = true;
-                    Console.WriteLine("¡Hasta luego!");
+                    Console.WriteLine("Ba-Byee!!");
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Presione una tecla para continuar...");
